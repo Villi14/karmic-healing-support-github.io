@@ -3,103 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karmic Healing - Support</title>
+    <meta name="description" content="Support for Karmic Healing, an offline iOS and watchOS app for energy balancing, requests, and reminders.">
+    <title>Support · Karmic Healing</title>
     <style>
+        :root {
+            color-scheme: light dark;
+            --background: #fefeff;
+            --surface: rgba(255, 255, 255, 0.92);
+            --surface-muted: #f5e9e5;
+            --text: #2f2f2d;
+            --text-secondary: #6b6b69;
+            --accent: #8d95ee;
+            --accent-warm: #f26e77;
+            --accent-green: #26bd47;
+            --border: rgba(141, 149, 238, 0.22);
+            --shadow: rgba(47, 47, 45, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 20px;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 8% 0%, rgba(242, 110, 119, 0.18), transparent 30%),
+                radial-gradient(circle at 92% 6%, rgba(141, 149, 238, 0.2), transparent 34%),
+                var(--background);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.65;
+        }
+
+        .shell {
+            width: min(100%, 820px);
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+            padding: 44px clamp(24px, 6vw, 64px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: 0 18px 60px var(--shadow);
+            backdrop-filter: blur(12px);
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
+
+        .hero {
+            padding-bottom: 30px;
             text-align: center;
-            margin-bottom: 30px;
         }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent-warm);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1,
         h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            line-height: 1.2;
         }
-        .contact-info {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: -0.04em;
         }
-        .email {
-            color: #3498db;
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 1.22rem;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        .lead {
+            max-width: 58ch;
+            margin: 16px auto 0;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .panel {
+            margin-top: 20px;
+            padding: 24px;
+            background: var(--surface-muted);
+            border-radius: 20px;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, rgba(242, 110, 119, 0.16), rgba(141, 149, 238, 0.16));
+            border: 1px solid var(--border);
+        }
+
+        .email,
+        a {
+            color: #5964d4;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: var(--accent-warm);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 16px;
+            color: white;
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent));
+            border-radius: 999px;
             text-decoration: none;
-            font-weight: bold;
+            box-shadow: 0 8px 18px rgba(141, 149, 238, 0.24);
         }
-        .email:hover {
-            text-decoration: underline;
+
+        .button.secondary {
+            color: var(--text);
+            background: transparent;
+            border: 1px solid var(--border);
+            box-shadow: none;
         }
-        .app-info {
-            background: #e8f5e8;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+
+        ul {
+            margin: 0;
+            padding-left: 1.25rem;
         }
-        .footer {
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        .requirements {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .requirement {
+            padding: 16px;
+            background: rgba(38, 189, 71, 0.1);
+            border-radius: 16px;
+        }
+
+        .requirement strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
             text-align: center;
-            margin-top: 40px;
-            color: #7f8c8d;
-            font-size: 14px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #1f2128;
+                --surface: rgba(43, 38, 42, 0.92);
+                --surface-muted: #392d2a;
+                --text: #ebeded;
+                --text-secondary: #afb1b1;
+                --border: rgba(141, 149, 238, 0.28);
+                --shadow: rgba(0, 0, 0, 0.28);
+            }
+
+            .email,
+            a {
+                color: #aeb4ff;
+            }
+
+            .button.secondary {
+                color: var(--text);
+            }
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 16px 12px;
+            }
+
+            .shell {
+                padding: 30px 22px;
+                border-radius: 22px;
+            }
+
+            .requirements {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🧘‍♀️ Karmic Healing - Support</h1>
-        
-        <div class="app-info">
-            <h2>About the App</h2>
-            <p><strong>Karmic Healing</strong> is a meditation and energy balancing companion designed to help you restore inner harmony and discover your path to wellness. Transform your daily routine with guided meditation sessions and energy balancing exercises.</p>
-        </div>
+    <main class="shell">
+        <header class="hero">
+            <p class="eyebrow">Karmic Healing</p>
+            <h1>Support</h1>
+            <p class="lead">A quiet space for your energy-balancing practice, requests, and reminders on iPhone, iPad, and Apple Watch.</p>
+            <div class="actions">
+                <a class="button" href="https://apps.apple.com/app/karmic-healing/id6749057269">View on the App Store</a>
+                <a class="button secondary" href="https://villi14.github.io/karmic-healing-privacy-policy-github.io/">Privacy Policy</a>
+            </div>
+        </header>
 
-        <h2>📧 Contact Support</h2>
-        <div class="contact-info">
-            <p>For any questions, feedback, or technical support, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:karmic.healing14@gmail.com" class="email">karmic.healing14@gmail.com</a></p>
-            <p>We typically respond within 24-48 hours.</p>
-        </div>
+        <section class="panel contact">
+            <h2>Contact Support</h2>
+            <p>For questions, feedback, or technical support, email us and include your device model and iOS/watchOS version when relevant.</p>
+            <p><strong>Email:</strong> <a class="email" href="mailto:karmic.healing14@gmail.com">karmic.healing14@gmail.com</a></p>
+            <p>We aim to reply as soon as we can.</p>
+        </section>
 
-        <h2>💬 App Store Reviews</h2>
-        <p>If you're experiencing issues or have feedback about the app, you can also:</p>
-        <ul>
-            <li>Leave a review in the App Store</li>
-            <li>Rate the app to help other users</li>
-            <li>Use the App Store's built-in feedback system</li>
-        </ul>
+        <section class="panel">
+            <h2>Common Solutions</h2>
+            <ul>
+                <li><strong>Notifications are not appearing:</strong> Open Settings → Apps → Karmic Healing → Notifications and allow notifications. Also check that the reminder is enabled and scheduled for a future time.</li>
+                <li><strong>Sound or vibration is not working:</strong> Check the in-app session settings, your device volume, Silent Mode, and Focus settings.</li>
+                <li><strong>Data is not saving:</strong> Make sure your device has available storage, then close and reopen the app. Your requests, reminders, and notes are stored locally on the device.</li>
+                <li><strong>The app language is incorrect:</strong> Change the preferred language in Settings → Apps → Karmic Healing → Language, if available on your device.</li>
+            </ul>
+        </section>
 
-        <h2>🔧 Common Solutions</h2>
-        <ul>
-            <li><strong>App not working:</strong> Try restarting the app or your device</li>
-            <li><strong>Notifications not working:</strong> Check your device's notification settings</li>
-            <li><strong>Sound issues:</strong> Ensure your device volume is up and not in silent mode</li>
-            <li><strong>Data not saving:</strong> Make sure you have sufficient storage space</li>
-        </ul>
+        <section class="panel">
+            <h2>About Karmic Healing</h2>
+            <p>Karmic Healing is an offline-first companion for iPhone, iPad, and Apple Watch, with guided energy-balancing sessions, requests, and reminders. It does not require an account and does not include advertising or usage analytics.</p>
+        </section>
 
-        <h2>📱 System Requirements</h2>
-        <ul>
-            <li>iOS 18.0 or later</li>
-            <li>iPhone, iPad, or iPod touch</li>
-        </ul>
+        <section class="panel">
+            <h2>System Requirements</h2>
+            <div class="requirements">
+                <div class="requirement">
+                    <strong>iPhone and iPad</strong>
+                    iOS 18.0 or later
+                </div>
+                <div class="requirement">
+                    <strong>Apple Watch</strong>
+                    watchOS 11.0 or later
+                </div>
+            </div>
+        </section>
 
-        <div class="footer">
-            <p>© 2025 Karmic Healing. All rights reserved.</p>
-            <p>Thank you for using Karmic Healing! 🙏</p>
-        </div>
-    </div>
+        <section class="panel">
+            <h2>App Store Reviews</h2>
+            <p>You can also share feedback or report an issue through the App Store review system.</p>
+            <a href="https://apps.apple.com/app/karmic-healing/id6749057269">Open Karmic Healing in the App Store</a>
+        </section>
+
+        <footer>
+            <p>© 2026 Karmic Healing. All rights reserved.</p>
+            <p>Thank you for using Karmic Healing.</p>
+        </footer>
+    </main>
 </body>
 </html>
