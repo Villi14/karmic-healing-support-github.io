@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Support for Karmic Healing, an offline iOS and watchOS app for energy balancing, requests, and reminders.">
+    <meta name="description" content="Support for Karmic Healing, an offline app for iOS, iPadOS, watchOS, and Android for energy balancing, requests, and reminders.">
     <title>Support · Karmic Healing</title>
     <style>
         :root {
@@ -135,6 +135,19 @@
             box-shadow: none;
         }
 
+        .button.soon {
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1px dashed var(--border);
+            box-shadow: none;
+            cursor: default;
+        }
+
+        .soon-note {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
         ul {
             margin: 0;
             padding-left: 1.25rem;
@@ -212,16 +225,17 @@
         <header class="hero">
             <p class="eyebrow">Karmic Healing</p>
             <h1>Support</h1>
-            <p class="lead">A quiet space for your energy-balancing practice, requests, and reminders on iPhone, iPad, and Apple Watch.</p>
+            <p class="lead">A quiet space for your energy-balancing practice, requests, and reminders on iPhone, iPad, Apple Watch, and Android devices.</p>
             <div class="actions">
                 <a class="button" href="https://apps.apple.com/app/karmic-healing/id6749057269">View on the App Store</a>
-                <a class="button secondary" href="https://villi14.github.io/karmic-healing-privacy-policy-github.io/">Privacy Policy</a>
+                <span class="button soon" aria-disabled="true">Google Play · Coming soon</span>
+                <a class="button secondary" href="https://villi14.github.io/karmic-healing-privacy-policy-github.io/privacy-policy.html">Privacy Policy</a>
             </div>
         </header>
 
         <section class="panel contact">
             <h2>Contact Support</h2>
-            <p>For questions, feedback, or technical support, email us and include your device model and iOS/watchOS version when relevant.</p>
+            <p>For questions, feedback, or technical support, email us and include your device model and system version (iOS, watchOS, or Android) when relevant.</p>
             <p><strong>Email:</strong> <a class="email" href="mailto:karmic.healing14@gmail.com">karmic.healing14@gmail.com</a></p>
             <p>We aim to reply as soon as we can.</p>
         </section>
@@ -230,15 +244,17 @@
             <h2>Common Solutions</h2>
             <ul>
                 <li><strong>Notifications are not appearing:</strong> Open Settings → Apps → Karmic Healing → Notifications and allow notifications. Also check that the reminder is enabled and scheduled for a future time.</li>
-                <li><strong>Sound or vibration is not working:</strong> Check the in-app session settings, your device volume, Silent Mode, and Focus settings.</li>
+                <li><strong>Reminders arrive late on Android:</strong> Android may deliver reminders a few minutes after the set time to save battery. If they are delayed much longer, open Settings → Apps → Karmic Healing → Battery and allow unrestricted battery use.</li>
+                <li><strong>Sound or vibration is not working:</strong> Check the in-app session settings, your device volume, and Silent Mode, Focus, or Do Not Disturb settings.</li>
                 <li><strong>Data is not saving:</strong> Make sure your device has available storage, then close and reopen the app. Your requests, reminders, and notes are stored locally on the device.</li>
-                <li><strong>The app language is incorrect:</strong> Change the preferred language in Settings → Apps → Karmic Healing → Language, if available on your device.</li>
+                <li><strong>The app language is incorrect:</strong> In the app, open Settings → Change Language. On iPhone and iPad this opens Settings → Apps → Karmic Healing → Language; on Android you choose the language directly in the app.</li>
+                <li><strong>Locked out of the app:</strong> If Face ID, Touch ID, or fingerprint does not work, unlock the app with the passcode you chose when turning on the app lock.</li>
             </ul>
         </section>
 
         <section class="panel">
             <h2>About Karmic Healing</h2>
-            <p>Karmic Healing is an offline-first companion for iPhone, iPad, and Apple Watch, with guided energy-balancing sessions, requests, and reminders. It does not require an account and does not include advertising or usage analytics.</p>
+            <p>Karmic Healing is an offline-first companion for iPhone, iPad, Apple Watch, and Android phones and tablets, with guided energy-balancing sessions, requests, and reminders. It does not require an account and does not include advertising or usage analytics.</p>
         </section>
 
         <section class="panel">
@@ -252,13 +268,18 @@
                     <strong>Apple Watch</strong>
                     watchOS 11.0 or later
                 </div>
+                <div class="requirement">
+                    <strong>Android phones and tablets</strong>
+                    Android 7.0 or later
+                </div>
             </div>
         </section>
 
         <section class="panel">
-            <h2>App Store Reviews</h2>
-            <p>You can also share feedback or report an issue through the App Store review system.</p>
-            <a href="https://apps.apple.com/app/karmic-healing/id6749057269">Open Karmic Healing in the App Store</a>
+            <h2>Store Reviews</h2>
+            <p>You can also share feedback or report an issue through App Store reviews, and soon through Google Play reviews.</p>
+            <p><a href="https://apps.apple.com/app/karmic-healing/id6749057269">Open Karmic Healing in the App Store</a></p>
+            <p class="soon-note">Karmic Healing on Google Play — coming soon</p>
         </section>
 
         <footer>
